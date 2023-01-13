@@ -1,2 +1,24 @@
-# blue-dreams-back-end
-This is a the back-end of the Blue Dreams Yatch it add the functionality for logins users, store reservations and display information dynamically
+# README
+
+This README would normally document whatever steps are necessary to get the
+application up and running.
+
+Things you may want to cover:
+
+* Ruby version
+
+* System dependencies
+
+* Configuration
+
+* Database creation
+
+* Database initialization
+
+* How to run the test suite
+
+* Services (job queues, cache servers, search engines, etc.)
+
+* Deployment instructions
+
+* ...
