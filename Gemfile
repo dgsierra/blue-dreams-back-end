@@ -9,6 +9,8 @@ gem "rails", "~> 7.0.4"
 # For reading ENV.
 gem 'dotenv-rails', groups: %i[development test]
 
+#For testing propurss
+gem "rspec-rails", group: [:development, :test]
 
 # Use postgresql as the database for Active Record
 gem "pg", "~> 1.1"
@@ -22,6 +24,8 @@ gem "rack-cors"
 # Devise
 gem 'devise'
 
+#Rubocop for check linters
+gem 'rubocop', '~> 1.43', require: false
 
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 # gem "jbuilder"
