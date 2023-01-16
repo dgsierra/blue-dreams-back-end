@@ -24,6 +24,14 @@ gem 'rack-cors'
 # Devise
 gem 'devise'
 
+# JWT
+
+gem 'devise-jwt'
+
+# bcrypt
+
+gem 'bcrypt'
+
 # Rubocop for check linters
 gem 'rubocop', '~> 1.43', require: false
 
