@@ -1,5 +1,5 @@
 class ShipsController < ApplicationController
-  before_action :set_ship, only: %i[ show update destroy ]
+  before_action :set_ship, only: %i[show update destroy]
 
   # GET /ships
   def index
@@ -39,13 +39,14 @@ class ShipsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_ship
-      @ship = Ship.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def ship_params
-      params.require(:ship).permit(:name, :capacity, :image, :price, :availability, :sale, :price_sale)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_ship
+    @ship = Ship.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def ship_params
+    params.require(:ship).permit(:name, :capacity, :image, :price, :availability, :sale, :price_sale)
+  end
 end
