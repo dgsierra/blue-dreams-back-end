@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  devise_for :users
+
+  devise_for :users, defaults: {format: :json }
   resources :reservations
   resources :ships
   resources :users

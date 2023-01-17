@@ -32,6 +32,11 @@ gem 'devise-jwt'
 
 gem 'bcrypt'
 
+
+# fast jsonapi
+
+gem 'fast_jsonapi'
+
 # Rubocop for check linters
 gem 'rubocop', '~> 1.43', require: false
 
