@@ -2,6 +2,8 @@ Rails.application.routes.draw do
   get 'private/test'
   get 'ships/index'
   post 'ships/create'
+  get 'reservations/index'
+
   devise_for :users,
     path: '',
     path_names: {

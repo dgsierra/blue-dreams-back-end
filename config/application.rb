@@ -36,6 +36,8 @@ module BlueDreamsBackEnd
     # Only loads a smaller set of middleware suitable for API only apps.
     # Middleware like session, flash, cookies can be added back manually.
     # Skip views, helpers and assets when generating a new resource.
+    config.time_zone = 'UTC'
+    Time::DATE_FORMATS[:default] = "%m/%d/%Y %H:%M:%S"
     config.api_only = true
   end
 end

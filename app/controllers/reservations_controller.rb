@@ -4,9 +4,13 @@ class ReservationsController < ApplicationController
 
   # GET /reservations
   def index
-    @reservations = Reservation.all
-
-    render json: @reservations
+    if current_user.admin == true
+      @reservations = Reservation.all
+      render json: @reservations
+    else
+      @reservations = current_user.reservations
+      render json: @reservations
+    end
   end
 
   # GET /reservations/1
@@ -17,7 +21,7 @@ class ReservationsController < ApplicationController
   # POST /reservations
   def create
     @reservation = Reservation.new(reservation_params)
-
+    @reservation.user = current_user
     if @reservation.save
       render json: @reservation, status: :created, location: @reservation
     else
@@ -48,6 +52,6 @@ class ReservationsController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def reservation_params
-    params.require(:reservation).permit(:date_start, :date_end, :total, :duration, :deposit, :insurance)
+    params.require(:reservation).permit(:date_start, :date_end, :total, :duration, :deposit, :insurance, :ship_id)
   end
 end
