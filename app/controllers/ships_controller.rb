@@ -1,5 +1,6 @@
 class ShipsController < ApplicationController
   before_action :set_ship, only: %i[show update destroy]
+  before_action :authenticate_user!, only: %i[create update destroy]
 
   # GET /ships
   def index
@@ -9,18 +10,22 @@ class ShipsController < ApplicationController
   end
 
   # GET /ships/1
-  def show
-    render json: @ship
-  end
+  # def show
+  #   render json: @ship
+  # end
 
   # POST /ships
   def create
-    @ship = Ship.new(ship_params)
+    if current_user.admin == true
+      @ship = Ship.new(ship_params)
 
-    if @ship.save
-      render json: @ship, status: :created, location: @ship
+      if @ship.save
+        render json: @ship, status: :created, location: @ship
+      else
+        render json: @ship.errors, status: :unprocessable_entity
+      end
     else
-      render json: @ship.errors, status: :unprocessable_entity
+      render json: { error: 'You are not authorized to create a ship' }, status: :unauthorized
     end
   end
 
@@ -34,9 +39,9 @@ class ShipsController < ApplicationController
   end
 
   # DELETE /ships/1
-  def destroy
-    @ship.destroy
-  end
+  # def destroy
+  #   @ship.destroy
+  # end
 
   private
 
