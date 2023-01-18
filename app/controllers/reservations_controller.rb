@@ -35,7 +35,6 @@ class ReservationsController < ApplicationController
       if @reservation.update(reservation_params)
         render json: @reservation
       else
-        debugger
         render json: @reservation.errors, status: :unprocessable_entity
       end
     else
@@ -45,7 +44,6 @@ class ReservationsController < ApplicationController
 
   # DELETE /reservations/1
   def destroy
-    # debugger
     if current_user.admin == true ||current_user == @reservation.user
       @reservation.destroy
     else
