@@ -4,13 +4,12 @@ class ReservationsController < ApplicationController
 
   # GET /reservations
   def index
-    if current_user.admin == true
-      @reservations = Reservation.all
-      render json: @reservations
-    else
-      @reservations = current_user.reservations
-      render json: @reservations
-    end
+    @reservations = if current_user.admin == true
+                      Reservation.all
+                    else
+                      current_user.reservations
+                    end
+    render json: @reservations
   end
 
   # GET /reservations/1
@@ -31,7 +30,7 @@ class ReservationsController < ApplicationController
 
   # PATCH/PUT /reservations/1
   def update
-    if current_user.admin == true ||current_user == @reservation.user
+    if current_user.admin == true || current_user == @reservation.user
       if @reservation.update(reservation_params)
         render json: @reservation
       else
@@ -44,7 +43,7 @@ class ReservationsController < ApplicationController
 
   # DELETE /reservations/1
   def destroy
-    if current_user.admin == true ||current_user == @reservation.user
+    if current_user.admin == true || current_user == @reservation.user
       @reservation.destroy
     else
       render json: { error: 'You are not authorized to delete this reservation' }, status: :unauthorized
@@ -62,5 +61,4 @@ class ReservationsController < ApplicationController
   def reservation_params
     params.require(:reservation).permit(:date_start, :date_end, :total, :duration, :deposit, :insurance, :ship_id)
   end
-
 end
