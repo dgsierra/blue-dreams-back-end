@@ -20,7 +20,7 @@ class ShipsController < ApplicationController
       @ship = Ship.new(ship_params)
 
       if @ship.save
-        render json: @ship, status: :created, location: @ship
+        render json: @ship, status: :created
       else
         render json: @ship.errors, status: :unprocessable_entity
       end
