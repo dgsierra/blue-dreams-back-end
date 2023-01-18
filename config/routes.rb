@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   get 'ships/index'
   post 'ships/create'
   get 'reservations/index'
+  delete 'reservations/destroy'
+  put 'reservations/update'
 
   devise_for :users,
     path: '',

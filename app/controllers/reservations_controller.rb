@@ -31,16 +31,26 @@ class ReservationsController < ApplicationController
 
   # PATCH/PUT /reservations/1
   def update
-    if @reservation.update(reservation_params)
-      render json: @reservation
+    if current_user.admin == true ||current_user == @reservation.user
+      if @reservation.update(reservation_params)
+        render json: @reservation
+      else
+        debugger
+        render json: @reservation.errors, status: :unprocessable_entity
+      end
     else
-      render json: @reservation.errors, status: :unprocessable_entity
+      render json: { error: 'You are not authorized to update this reservation' }, status: :unauthorized
     end
   end
 
   # DELETE /reservations/1
   def destroy
-    @reservation.destroy
+    # debugger
+    if current_user.admin == true ||current_user == @reservation.user
+      @reservation.destroy
+    else
+      render json: { error: 'You are not authorized to delete this reservation' }, status: :unauthorized
+    end
   end
 
   private
@@ -54,4 +64,5 @@ class ReservationsController < ApplicationController
   def reservation_params
     params.require(:reservation).permit(:date_start, :date_end, :total, :duration, :deposit, :insurance, :ship_id)
   end
+
 end
