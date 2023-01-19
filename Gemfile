@@ -32,6 +32,10 @@ gem 'rubocop', '~> 1.43', require: false
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 # gem "jbuilder"
 
+# Bullet for test  if there is n+1 queries
+
+gem 'bullet', group: 'development'
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 
