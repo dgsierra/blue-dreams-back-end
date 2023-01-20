@@ -34,7 +34,7 @@ gem 'rubocop', '~> 1.43', require: false
 
 # Bullet for test  if there is n+1 queries
 
-gem 'bullet', group: 'development'
+gem 'bullet', group: %i[development test]
 
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
