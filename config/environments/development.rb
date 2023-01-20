@@ -7,10 +7,10 @@ Rails.application.configure do
     Bullet.alert = true
     Bullet.bullet_logger = true
     Bullet.console = true
-    Bullet.xmpp = { :account  => 'bullets_account@jabber.org',
-                    :password => 'bullets_password_for_jabber',
-                    :receiver => 'your_account@jabber.org',
-                    :show_online_status => true }
+    # Bullet.xmpp = { :account  => 'bullets_account@jabber.org',
+    #                 :password => 'bullets_password_for_jabber',
+    #                 :receiver => 'your_account@jabber.org',
+    #                 :show_online_status => true }
     Bullet.rails_logger = true
     Bullet.honeybadger = true
     Bullet.bugsnag = true
@@ -21,7 +21,7 @@ Rails.application.configure do
     Bullet.skip_html_injection = false
     Bullet.stacktrace_includes = [ 'your_gem', 'your_middleware' ]
     Bullet.stacktrace_excludes = [ 'their_gem', 'their_middleware', ['my_file.rb', 'my_method'], ['my_file.rb', 16..20] ]
-    Bullet.slack = { webhook_url: 'http://some.slack.url', channel: '#default', username: 'notifier' }    
+    Bullet.slack = { webhook_url: 'http://some.slack.url', channel: '#default', username: 'notifier' }
   end
   # Settings specified here will take precedence over those in config/application.rb.
 
@@ -84,5 +84,5 @@ Rails.application.configure do
 
   # Uncomment if you wish to allow Action Cable access from any origin.
   # config.action_cable.disable_request_forgery_protection = true
-  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+  config.action_mailer.default_url_options = { host: 'localhost', port: 3020 }
 end
