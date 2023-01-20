@@ -22,7 +22,7 @@ class ReservationsController < ApplicationController
     @reservation = Reservation.new(reservation_params)
     @reservation.user = current_user
     if @reservation.save
-      render json: @reservation, status: :created, location: @reservation
+      render json: @reservation, status: :created
     else
       render json: @reservation.errors, status: :unprocessable_entity
     end
@@ -32,7 +32,7 @@ class ReservationsController < ApplicationController
   def update
     if current_user.admin == true || current_user == @reservation.user
       if @reservation.update(reservation_params)
-        render json: @reservation
+        render json: @reservation, status: :ok
       else
         render json: @reservation.errors, status: :unprocessable_entity
       end
@@ -45,6 +45,7 @@ class ReservationsController < ApplicationController
   def destroy
     if current_user.admin == true || current_user == @reservation.user
       @reservation.destroy
+      render json: { message: 'Reservation deleted' }
     else
       render json: { error: 'You are not authorized to delete this reservation' }, status: :unauthorized
     end
