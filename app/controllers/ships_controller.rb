@@ -4,7 +4,7 @@ class ShipsController < ApplicationController
 
   # GET /ships
   def index
-    @ships = Ship.all
+    @ships = Ship.preload(reservations: :user).all
 
     render json: @ships
   end

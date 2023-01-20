@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   post 'ships/create'
   get 'reservations/index'
   delete 'reservations/destroy'
+  post 'reservations/create'
   put 'reservations/update'
 
   devise_for :users,
