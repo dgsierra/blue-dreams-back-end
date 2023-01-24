@@ -25,5 +25,11 @@ RSpec.describe 'Reservations', type: :request do
       user_id: @user.id,
       date: '2020-01-02'
     )
+
+    @reservation3 = Reservation.create!(
+      ship_id: @ship.id,
+      user_id: @user.id,
+      date: '2020-01-03'
+    )
   end
 end
