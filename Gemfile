@@ -7,7 +7,7 @@ ruby '3.1.3'
 gem 'rails', '~> 7.0.4'
 
 # For reading ENV.
-gem 'dotenv-rails', groups: %i[development test]
+gem 'dotenv-rails', group: %i[development test]
 
 # For testing propurss
 gem 'rspec-rails', group: %i[development test]
@@ -34,7 +34,7 @@ gem 'rubocop', '~> 1.43', require: false
 
 # Bullet for test  if there is n+1 queries
 
-gem 'bullet', group: 'development'
+gem 'bullet', group: %i[development test]
 
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"

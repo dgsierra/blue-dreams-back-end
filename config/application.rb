@@ -39,6 +39,15 @@ module BlueDreamsBackEnd
     config.time_zone = 'UTC'
     Time::DATE_FORMATS[:default] = "%m/%d/%Y %H:%M:%S"
     config.api_only = true
+    puts Gem.loaded_specs.keys
+    config.after_initialize do
+      Bullet.enable = true
+      Bullet.alert = true
+      Bullet.bullet_logger = true
+      Bullet.console = true
+      Bullet.rails_logger = true
+      Bullet.add_footer = true
+    end
   end
 end
 

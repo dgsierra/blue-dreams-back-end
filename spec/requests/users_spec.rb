@@ -1,11 +1,13 @@
 require 'rails_helper'
-require_relative '../config/environment'
 
 RSpec.describe 'Users', type: :request do
-  describe 'GET /users' do
-    it 'works! (now write some real specs)' do
-      get users_index_path
-      expect(response).to have_http_status(200)
-    end
+  before(:each) do
+    @users = User.create!(
+      name: 'John Foreman',
+      email: 'john@mail.com',
+      password: '12345678',
+      password_confirmation: '12345678'
+    )
+    sign_in @users
   end
 end
