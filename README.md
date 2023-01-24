@@ -25,8 +25,8 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 Blue-Dream-Yatch Booking App 
-Blue-Dream-Yatch Booking Backend is a Yath Booking application where the user can register new accounts, login and reserve a set of different Ships. It is built and connected by using two different repos, including Back-end(Rails) and Front-end(React/Redux).
+# 📖 Blue Dream Yatch Booking App 
+Blue Dream Yatch Booking Backend is a yacht booking application where user can register new accounts, login and book a set of different boats. It is built and connected by using two different repos, including Back-end(Rails) and Front-end(React/Redux).
 
 #### Link to React App [Blue-Dream-Booking-Frontend](https://github.com/dgonzalesi/blue-dreams-front-end.git)
 
@@ -94,12 +94,6 @@ The end result should follow the following data model (this is an Entity Relatio
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 - [Link to the Blue-Dream-Yatch API documentation](https://documenter.getpostman.com/view/25472635/2s8ZDbUzpv#162b150b-68bd-4c85-860b-157a56653ab9)
-
-<!-- ## Screenshots
-
-![image_2023-01-19_19-00-48](https://user-images.png)
- -->
-
 
 ## Roadmap
 
