@@ -1,4 +1,4 @@
-# frozen_string_literal: true
+frozen_string_literal: false
 
 class AddDeviseToUsers < ActiveRecord::Migration[7.0]
   def self.up
