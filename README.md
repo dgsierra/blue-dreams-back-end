@@ -226,13 +226,13 @@ To run the project, execute the following command:
 </div>
 
 <div id="badges"align="center">
-  <a href="http://lnnk.in/andres-menutti/">
+  <a href="http://linkedin.com/in/andres-menutti/">
     <img src="https://img.shields.io/badge/LinkedIn-blue?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn Badge"/>
   </a>
   <a href="https://github.com/andym80/">
     <img src="https://img.shields.io/badge/github-black?style=for-the-badge&logo=github&logoColor=white" alt="Github Badge"/>
   </a>
-  <a href="http://lnnk.in/andres-menutti/">
+  <a href="http://linkedin.com/in/andres-menutti/">
     <img src="https://img.shields.io/badge/Twitter-blue?style=for-the-badge&logo=twitter&logoColor=white" alt="Twitter Badge"/>
   </a>
 </div>
