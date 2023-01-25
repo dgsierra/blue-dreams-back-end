@@ -3,5 +3,5 @@ class Ship < ApplicationRecord
   validates :name, presence: true, length: { minimum: 3, maximum: 20 }, uniqueness: { case_sensitive: false, message: '%<value>s is already taken' }
   validates :capacity, presence: true, numericality: { greater_than: 0 }
   validates :sale, inclusion: { in: [true, false] }
-  validate :image, presence: true
+  validates :image, presence: true
 end
