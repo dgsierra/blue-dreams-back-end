@@ -27,7 +27,7 @@ RSpec.describe 'Ships', type: :request do
         sale: true,
         price_sale: 500
       )
-      reservation = Reservation.create(
+      Reservation.create(
         ship_id: ship.id,
         user_id: user.id,
         date_start: '01-09-2022',
@@ -38,6 +38,62 @@ RSpec.describe 'Ships', type: :request do
         insurance: true
       )
       expect(user.reservations.count).to eq(1)
+    end
+  end
+
+  describe 'if it showns capacity' do
+    it 'shows the capacity' do
+      Ship.create(
+        name: 'Titanic',
+        capacity: 1000,
+        image: 'img',
+        price: 1_000,
+        availability: true,
+        sale: true,
+        price_sale: 500
+      )
+    end
+  end
+
+  describe 'if it showns price' do
+    it 'shows the price' do
+      Ship.create(
+        name: 'Titanic',
+        capacity: 1000,
+        image: 'img',
+        price: 1_000,
+        availability: true,
+        sale: true,
+        price_sale: 500
+      )
+    end
+  end
+
+  describe 'if it showns availability' do
+    it 'show availability' do
+      Ship.create(
+        name: 'Titanic',
+        capacity: 1000,
+        image: 'img',
+        price: 1_000,
+        availability: true,
+        sale: true,
+        price_sale: 500
+      )
+    end
+  end
+
+  describe 'if shows price ' do
+    it 'shows price' do
+      Ship.create(
+        name: 'Titanic',
+        capacity: 1000,
+        image: 'img',
+        price: 1_000,
+        availability: true,
+        sale: true,
+        price_sale: 500
+      )
     end
   end
 end
