@@ -67,6 +67,8 @@ gem 'honeybadger'
 
 gem 'rollbar'
 
+# TODO Bug it send a message of Not delivering sessions due to an invalid api_key :(https://github.com/chaskiq/chaskiq/issues/251).
+
 gem 'bugsnag'
 
 gem 'appsignal'

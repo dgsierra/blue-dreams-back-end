@@ -1,16 +1,16 @@
 example_id                                  | status | run_time        |
 ------------------------------------------- | ------ | --------------- |
 ./spec/models/reservation_spec.rb[1:1:1]    | failed | 0.33643 seconds |
-./spec/models/ship_spec.rb[1:1:1]           | passed | 0.03815 seconds |
-./spec/models/ship_spec.rb[1:1:2]           | passed | 0.00203 seconds |
-./spec/models/ship_spec.rb[1:2:1]           | passed | 0.00225 seconds |
-./spec/models/ship_spec.rb[1:3:1]           | passed | 0.00286 seconds |
-./spec/models/user_spec.rb[1:1:1]           | passed | 0.02767 seconds |
+./spec/models/ship_spec.rb[1:1:1]           | passed | 0.00222 seconds |
+./spec/models/ship_spec.rb[1:1:2]           | passed | 0.00092 seconds |
+./spec/models/ship_spec.rb[1:2:1]           | passed | 0.0027 seconds  |
+./spec/models/ship_spec.rb[1:3:1]           | passed | 0.00143 seconds |
+./spec/models/user_spec.rb[1:1:1]           | passed | 0.04669 seconds |
 ./spec/requests/reservations_spec.rb[1:1:1] | failed | 0.02704 seconds |
-./spec/requests/ships_spec.rb[1:1:1]        | passed | 0.04419 seconds |
-./spec/requests/ships_spec.rb[1:2:1]        | passed | 0.07774 seconds |
-./spec/requests/ships_spec.rb[1:3:1]        | passed | 0.00843 seconds |
-./spec/requests/ships_spec.rb[1:4:1]        | passed | 0.00642 seconds |
-./spec/requests/ships_spec.rb[1:5:1]        | passed | 0.00759 seconds |
-./spec/requests/ships_spec.rb[1:6:1]        | passed | 0.00963 seconds |
+./spec/requests/ships_spec.rb[1:1:1]        | passed | 0.02978 seconds |
+./spec/requests/ships_spec.rb[1:2:1]        | passed | 0.03757 seconds |
+./spec/requests/ships_spec.rb[1:3:1]        | passed | 0.01066 seconds |
+./spec/requests/ships_spec.rb[1:4:1]        | passed | 0.00216 seconds |
+./spec/requests/ships_spec.rb[1:5:1]        | passed | 0.00243 seconds |
+./spec/requests/ships_spec.rb[1:6:1]        | passed | 0.00204 seconds |
 ./spec/requests/users_spec.rb[1:1:1]        | failed | 0.00649 seconds |
