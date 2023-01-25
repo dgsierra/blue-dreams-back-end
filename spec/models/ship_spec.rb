@@ -14,4 +14,19 @@ RSpec.describe 'Ships', type: :model do
       expect(ship.errors).to have_key(:capacity)
     end
   end
+
+  describe 'associations' do
+    it 'has many reservations' do
+      ship = Ship.reflect_on_association(:reservations)
+      expect(ship.macro).to eq(:has_many)
+    end
+  end
+
+  describe 'validations' do
+    it 'is invalid with a negative capacity' do
+      ship = Ship.new(capacity: -1)
+      ship.save
+      expect(ship.valid?).to eq(false)
+    end
+  end
 end
