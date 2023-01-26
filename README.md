@@ -25,8 +25,8 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 Blue-Dream-Yatch Booking App 
-Hotel Booking Backend is a Hotel Booking application where the user can register new accounts, login and reserve a set of different Hotels. It is built and connected by using two different repos, including Back-end(Rails) and Front-end(React/Redux).
+# 📖 Blue Dream Yatch Booking App 
+Blue Dream Yatch Booking Backend is a yacht booking application where user can register new accounts, login and book a set of different boats. It is built and connected by using two different repos, including Back-end(Rails) and Front-end(React/Redux).
 
 #### Link to React App [Blue-Dream-Booking-Frontend](https://github.com/dgonzalesi/blue-dreams-front-end.git)
 
@@ -94,12 +94,6 @@ The end result should follow the following data model (this is an Entity Relatio
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 - [Link to the Blue-Dream-Yatch API documentation](https://documenter.getpostman.com/view/25472635/2s8ZDbUzpv#162b150b-68bd-4c85-860b-157a56653ab9)
-
-<!-- ## Screenshots
-
-![image_2023-01-19_19-00-48](https://user-images.png)
- -->
-
 
 ## Roadmap
 
@@ -232,13 +226,13 @@ To run the project, execute the following command:
 </div>
 
 <div id="badges"align="center">
-  <a href="http://lnnk.in/andres-menutti/">
+  <a href="http://linkedin.com/in/andres-menutti/">
     <img src="https://img.shields.io/badge/LinkedIn-blue?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn Badge"/>
   </a>
   <a href="https://github.com/andym80/">
     <img src="https://img.shields.io/badge/github-black?style=for-the-badge&logo=github&logoColor=white" alt="Github Badge"/>
   </a>
-  <a href="http://lnnk.in/andres-menutti/">
+  <a href="http://linkedin.com/in/andres-menutti/">
     <img src="https://img.shields.io/badge/Twitter-blue?style=for-the-badge&logo=twitter&logoColor=white" alt="Twitter Badge"/>
   </a>
 </div>
