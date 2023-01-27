@@ -148,6 +148,20 @@ To run the project, execute the following command:
 ```sh or bash
   rails server or rails s
 ```
+  
+  
+### Tests Procedure
+
+When you are going to start the tests, please follow commands in your terminal:
+
+```- rspec or,
+   - rspec spec/models/user_spec.rb, in order to specify the exact path
+   - rspec spec/models/user_spec.rb:10, in order to specify a special test method
+  
+  It's a good practice to run the tests after making any changes to the codebase or before deploying the application to ensure that everything is working as expected.
+  
+  Finally, you can check the RSpec documentation on how to use those options and configure it according to your project needs.
+```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
