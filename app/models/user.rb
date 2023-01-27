@@ -12,5 +12,5 @@ class User < ApplicationRecord
   validates :name, presence: true
   validates :email, presence: true
   validates :password, presence: true
-  validates :license, presence: true, inclusion: { in: [true, false] }
+  validates :license, inclusion: { in: [true, false] }
 end
