@@ -8,7 +8,7 @@
 
 User.create!(name: "Juan", admin: true, license: true, email: 'juan@mail.com', password: "123456", password_confirmation: "123456")
 User.create!(name: "Juan2", admin: false, license: true, email: 'juan2@mail.com', password: "123456", password_confirmation: "123456")
-User.create!(name: "Pancho", admin: false, license: false, email: 'pancho@mail.com', password: "123456", password_confirmation: "123456")
+User.create!(name: "Pancho", admin: false, license: true, email: 'pancho@mail.com', password: "123456", password_confirmation: "123456")
 User.create!(name: "Daniel", admin: false, license: true, email: 'daniel@mail.com', password: "123456", password_confirmation: "123456")
 User.create!(name: "Carlos", admin: true, license: false, email: 'carlos@mail.com', password: "123456", password_confirmation: "123456")
 User.create!(name: "Maria", admin: false, license: true, email: 'maria@mail.com', password: "123456", password_confirmation: "123456")
