@@ -89,7 +89,7 @@ The end result should follow the following data model (this is an Entity Relatio
 
 - [Blue Dream  Frontend deployment link]()
 
-- [Blue Dream Bakend deployment link](https://blue-dreams-back-end.herokuapp.com/)
+- [Blue Dream Backend deployment link](https://blue-dreams-back-end.herokuapp.com/)
 > Note this is for information purpose, however if you go to this link you wont be able to see a content, since it is API only(It will retrieve json responses)
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
