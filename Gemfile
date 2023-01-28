@@ -1,13 +1,13 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '3.1.2'
+ruby '3.1.3'
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem 'rails', '~> 7.0.4'
 
 # For reading ENV.
-gem 'dotenv-rails', groups: %i[development test]
+gem 'dotenv-rails', group: %i[development test]
 
 # For testing propurss
 gem 'rspec-rails', group: %i[development test]
@@ -24,11 +24,17 @@ gem 'rack-cors'
 # Devise
 gem 'devise'
 
+gem 'devise-jwt'
+
 # Rubocop for check linters
 gem 'rubocop', '~> 1.43', require: false
 
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 # gem "jbuilder"
+
+# Bullet for test  if there is n+1 queries
+
+gem 'bullet', group: %i[development test]
 
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
@@ -50,6 +56,26 @@ gem 'bootsnap', require: false
 
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
 # gem "rack-cors"
+
+gem 'uniform_notifier'
+
+gem 'xmpp4r'
+
+gem 'airbrake'
+
+gem 'honeybadger'
+
+gem 'rollbar'
+
+# TODO: Bug it send a message of Not delivering sessions due to an invalid api_key :(https://github.com/chaskiq/chaskiq/issues/251).
+
+gem 'bugsnag'
+
+gem 'appsignal'
+
+gem 'slack-notifier'
+
+gem 'terminal-notifier'
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
