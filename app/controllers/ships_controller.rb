@@ -39,9 +39,14 @@ class ShipsController < ApplicationController
   end
 
   # DELETE /ships/1
-  # def destroy
-  #   @ship.destroy
-  # end
+  def destroy
+    if current_user.admin == true
+      @ship.destroy
+      render json: { message: 'Reservation deleted' }
+    else
+      render json: { error: 'You are not authorized to delete Ships' }, status: :unauthorized
+    end
+  end
 
   private
 

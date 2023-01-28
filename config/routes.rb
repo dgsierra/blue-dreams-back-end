@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   get 'private/test'
   get 'ships/index'
   post 'ships/create'
+  delete 'ships/destroy'
   get 'reservations/index'
   delete 'reservations/destroy'
   post 'reservations/create'
