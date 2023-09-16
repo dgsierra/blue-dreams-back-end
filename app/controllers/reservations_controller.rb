@@ -18,6 +18,10 @@ class ReservationsController < ApplicationController
   end
 
   # POST /reservations
+  # TODO Get the total from the input dates
+  # TODO The dates cant be in the past
+  # TODO Get the rate from the ship
+  # TODO Get the deposit from the ship that should be 5% the value of the ship
   def create
     @reservation = Reservation.new(reservation_params)
     @reservation.user = current_user
