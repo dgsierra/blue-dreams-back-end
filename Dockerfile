@@ -31,7 +31,6 @@ RUN bundle install
 
 # This are the ports exposed by the container
 EXPOSE 3000
-
-CMD ["rails", "server"]
-
+RUN echo ${RAILS_ENV}
+CMD ["rails", "server", "-b", "0.0.0.0"]
 RUN echo "Dockerfile Image Creade Successfully"
